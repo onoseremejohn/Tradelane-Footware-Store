@@ -58,6 +58,11 @@ const Wrapper = styled.div`
       }
     }
   }
+  @media (max-width: 600px) {
+    li:nth-child(2) {
+      display: ${({ sidebar }) => (sidebar ? "list-item" : "none")};
+    }
+  }
 `;
 
 export default Social;

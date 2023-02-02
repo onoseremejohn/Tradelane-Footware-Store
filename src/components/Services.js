@@ -7,13 +7,15 @@ const Services = () => {
       <div className='section-center'>
         <article className='header'>
           <h3>
-            custom furniture <br />
-            built only for you
+            Shop Shoes <br />
+            walk in comfort
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quidem
-            error nam earum iure accusantium in distinctio! Optio, veritatis
-            asperiores?
+            Discover the ultimate footwear shopping experience with our wide
+            range of comfortable and stylish shoes. Whether you're looking for
+            casual sneakers, formal dress shoes, or anything in between, we've
+            got you covered. Browse our collection today and find your perfect
+            fit!
           </p>
         </article>
         <div className='services-center'>

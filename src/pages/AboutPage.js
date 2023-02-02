@@ -14,13 +14,16 @@ const AboutPage = () => {
             <div className='underline'></div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            ipsum placeat, accusamus dolore ullam amet recusandae nobis nam
-            commodi vitae, minus repellat. Reiciendis praesentium facere magni,
-            obcaecati ipsa vero maiores. Temporibus corporis, ducimus labore
-            sapiente vitae beatae cupiditate adipisci consectetur repellendus
-            sequi! Ullam, at voluptatibus alias quibusdam recusandae accusamus
-            magnam.
+            Tradelane has been a go-to source for footwear for many years. Our
+            mission is to offer a wide range of fashionable and comfortable
+            footwear options. We carefully curate products from top brands in
+            the industry to provide our customers with a diverse selection of
+            styles. As a reseller, sustainability is a priority for us. We
+            strive to make environmentally responsible decisions in all aspects
+            of our business. Our commitment to sustainability, along with our
+            premium product selection and exceptional customer service, has made
+            Tradelane a trusted name in footwear. Join us on our journey to
+            bring you the best in fashion and comfort.
           </p>
         </article>
       </Wrapper>

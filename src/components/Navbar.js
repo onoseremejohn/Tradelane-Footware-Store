@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
@@ -52,14 +52,21 @@ const NavContainer = styled.nav`
     width: 90vw;
     margin: 0 auto;
     max-width: var(--max-width);
+    height: 5rem;
   }
   .nav-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 5rem;
+    a {
+      display: block;
+      height: 5rem;
+    }
     img {
-      width: 175px;
-      margin-left: -15px;
+      display: block;
+      /* height: calc(100% + 2.5rem); */
+      height: 105%;
     }
   }
   .nav-toggle {

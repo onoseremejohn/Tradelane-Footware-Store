@@ -1,12 +1,11 @@
-
 import styled from "styled-components";
 import { formatPrice } from "../utils/helpers";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Product = ({ image, name, price, id }) => {
+const Product = ({ image, name, price, id, featur }) => {
   return (
-    <Wrapper>
+    <Wrapper outline={featur}>
       <div className='container'>
         <img src={image} alt='name' />
         <Link to={`/products/${id}`} className='link'>
@@ -22,6 +21,10 @@ const Product = ({ image, name, price, id }) => {
 };
 
 const Wrapper = styled.article`
+  /* outline: 1px solid var(--clr-primary-5); */
+  outline: ${(props) => {
+    if (props.outline) return `1px solid var(--clr-grey-5)`;
+  }};
   .container {
     position: relative;
     background: var(--clr-black);
@@ -65,6 +68,9 @@ const Wrapper = styled.article`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    h5 {
+      font-family: "Noto Sans", sans-serif;
+    }
   }
   footer h5,
   footer p {

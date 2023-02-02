@@ -7,9 +7,10 @@ const Contact = () => {
         <h3>Join our newsletter and get 20% off</h3>
         <div className='content'>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
-            impedit voluptatum atque veritatis sed voluptates molestiae
-            praesentium tenetur nesciunt nisi?
+            Stay ahead of the latest trends and be the first to know about TradeLane
+            exclusive promotions and sales. Sign up for our newsletter today and
+            receive a special discount on your next purchase. Don't miss out on
+            the chance to save big on your favorite footwear styles!
           </p>
           <form className='contact-form'>
             <input id='' className='form-input' placeholder='enter email' />

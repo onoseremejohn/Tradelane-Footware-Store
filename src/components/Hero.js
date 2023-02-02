@@ -8,12 +8,12 @@ const Hero = () => {
     <Wrapper className='section-center'>
       <article className='content'>
         <h1>
-          design your <br />
-          comfort zone
+          Step into Style : <br />
+          the Trendiest Footwears of the Season
         </h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-          dicta id iusto fugit neque tempore, commodi ipsa illum beatae eos!
+          Welcome to <strong>Trade Lane</strong> footwear store where
+          fashion meets comfort. Discover your perfect match and step up your style game. We have a pair for every occation
         </p>
         <Link to='/products' className='btn hero-btn'>
           shop now
@@ -21,7 +21,7 @@ const Hero = () => {
       </article>
       <article className='img-container'>
         <img src={heroBcg} alt='nice table' className='main-img' />
-        <img src={heroBcg2} alt='person working' className='accent-img' />
+        {/* <img src={heroBcg2} alt='person working' className='accent-img' /> */}
       </article>
     </Wrapper>
   );

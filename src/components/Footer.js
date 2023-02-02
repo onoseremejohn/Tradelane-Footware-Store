@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Social from "./Social";
 const Footer = () => {
   return (
     <Wrapper>
@@ -7,8 +8,9 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} <span>TradeLane</span>
       </h5>
       <h5>All rights reserved</h5>
+      <Social />
     </Wrapper>
-  )
+  );
 };
 
 const Wrapper = styled.footer`
@@ -19,6 +21,10 @@ const Wrapper = styled.footer`
   align-items: center;
   background: var(--clr-black);
   text-align: center;
+  position: relative;
+  .social {
+    position: absolute;
+  }
   span {
     color: var(--clr-primary-5);
   }

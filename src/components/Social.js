@@ -35,7 +35,7 @@ const Social = ({ sidebar }) => {
 
 const Wrapper = styled.div`
   top: 50%;
-  right: 10%;
+  right: 7.5%;
   transform: translateY(-50%);
   display: inline-block;
   margin: 0 auto;

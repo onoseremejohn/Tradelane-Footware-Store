@@ -96,6 +96,7 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: 1px solid var(--clr-primary-1);
     svg {
       font-size: 0.75rem;
       color: var(--clr-white);

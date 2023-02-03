@@ -9,7 +9,7 @@ const Hero = () => {
       <article className='content'>
         <h1>
           Step into Style : <br />
-          the Trendiest Footwears of the Season
+          the Trendiest Footwear of the Season
         </h1>
         <p>
           Welcome to <strong>Trade Lane</strong> footwear store where
@@ -35,7 +35,7 @@ const Wrapper = styled.section`
     display: none;
   }
   h1 {
-    font-family: "Oleo Script", cursive;
+    font-family: "Noto Sans", sans-serif;
   }
   p {
     line-height: 2;

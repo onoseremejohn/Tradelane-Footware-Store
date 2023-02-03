@@ -40,10 +40,14 @@ const Wrapper = styled.section`
   }
   h4 {
     margin-bottom: 0.5rem;
+    text-transform: capitalize;
   }
   .price {
-    color: var(--clr-primary-6);
+    color: var(--clr-black);
     margin-bottom: 0.75rem;
+    font-family: "Noto Sans", sans-serif;
+    font-size: larger;
+    /* background-color: var(--clr-primary-1); */
   }
   p {
     max-width: 45em;

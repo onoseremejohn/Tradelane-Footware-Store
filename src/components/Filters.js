@@ -104,7 +104,11 @@ const Filters = () => {
                     data-color={c}
                     onClick={updateFilters}
                   >
-                    {color === c ? <FaCheck /> : null}
+                    {color === c ? (
+                      <Svg coor={c}>
+                        <FaCheck />
+                      </Svg>
+                    ) : null}
                   </button>
                 );
               })}
@@ -133,11 +137,19 @@ const Filters = () => {
             />
           </div>
         </form>
-        <button className="clear-btn" type="button" onClick={clearFilters}>clear filters</button>
+        <button className='clear-btn' type='button' onClick={clearFilters}>
+          clear filters
+        </button>
       </div>
     </Wrapper>
   );
 };
+
+const Svg = styled.div`
+  svg {
+    color: ${({ coor }) => (coor === "#fff" ? "black" : "white")};
+  }
+`;
 
 const Wrapper = styled.section`
   .form-control {
@@ -164,7 +176,7 @@ const Wrapper = styled.section`
     text-transform: capitalize;
     background: transparent;
     border: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 3px solid transparent;
     letter-spacing: var(--spacing);
     color: var(--clr-grey-5);
     cursor: pointer;
@@ -195,9 +207,9 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: 1px solid var(--clr-primary-1);
     svg {
       font-size: 0.5rem;
-      color: var(--clr-white);
     }
   }
   .all-btn {
@@ -210,8 +222,8 @@ const Wrapper = styled.section`
   .active {
     opacity: 1;
   }
-  .all-btn .active {
-    text-decoration: underline;
+  .all-btn.active {
+    font-weight: 800;
   }
   .price {
     margin-bottom: 0.25rem;

@@ -63,6 +63,9 @@ const Wrapper = styled.div`
       display: ${({ sidebar }) => (sidebar ? "list-item" : "none")};
     }
   }
+  @media (min-width: 1180px) {
+    right: 20%;
+  }
 `;
 
 export default Social;

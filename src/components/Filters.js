@@ -201,13 +201,12 @@ const Wrapper = styled.section`
     border-radius: 50%;
     background: #222;
     margin-right: 0.5rem;
-    border: none;
     cursor: pointer;
     opacity: 0.5;
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 1px solid var(--clr-primary-1);
+    border: 1px solid var(--clr-primary-1);
     svg {
       font-size: 0.5rem;
     }

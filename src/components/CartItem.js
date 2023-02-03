@@ -87,7 +87,7 @@ const Wrapper = styled.article`
       background: red;
       margin-left: 0.5rem;
       border-radius: var(--radius);
-      outline: 1px solid var(--clr-primary-1);
+      border: 1px solid var(--clr-primary-1);
     }
   }
   .price-small {

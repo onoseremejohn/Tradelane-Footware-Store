@@ -57,14 +57,14 @@ const Wrapper = styled.div`
         }
       }
     }
-  }
-  @media (max-width: 600px) {
-    li:nth-child(2) {
-      display: ${({ sidebar }) => (sidebar ? "list-item" : "none")};
+    @media (max-width: 600px) {
+      li:nth-child(2) {
+        display: ${({ sidebar }) => (sidebar ? "list-item" : "none")};
+      }
     }
-  }
-  @media (min-width: 1180px) {
-    right: 20%;
+    @media (min-width: 1180px) {
+      right: 20%;
+    }
   }
 `;
 

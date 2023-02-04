@@ -9,11 +9,12 @@ const Hero = () => {
       <article className='content'>
         <h1>
           Step into Style : <br />
-          the Trendiest Footwear of the Season
+          <span>the Trendiest Footwear of the Season</span>
         </h1>
         <p>
-          Welcome to <strong>Trade Lane</strong> footwear store where
-          fashion meets comfort. Discover your perfect match and step up your style game. We have a pair for every occation
+          Welcome to <strong>Trade Lane</strong> footwear store where fashion
+          meets comfort. Discover your perfect match and step up your style
+          game. We have a pair for every occation
         </p>
         <Link to='/products' className='btn hero-btn'>
           shop now
@@ -35,7 +36,12 @@ const Wrapper = styled.section`
     display: none;
   }
   h1 {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Oleo Script", cursive;
+    color: var(--clr-primary-4);
+    span {
+      font-family: "Noto Sans", sans-serif;
+      color: var(--clr-grey-1);
+    }
   }
   p {
     line-height: 2;

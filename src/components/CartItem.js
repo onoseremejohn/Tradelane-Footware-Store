@@ -91,7 +91,9 @@ const Wrapper = styled.article`
     }
   }
   .price-small {
-    color: var(--clr-primary-5);
+    color: var(--clr-grey-1);
+    font-weight: 800;
+    font-family: "Noto Sans", sans-serif;
   }
   .amount-btns {
     width: 75px;
@@ -123,9 +125,10 @@ const Wrapper = styled.article`
     .subtotal {
       display: block;
       margin-bottom: 0;
-      color: var(--clr-grey-5);
-      font-weight: 400;
+      color: var(--clr-grey-1);
+      font-weight: 800;
       font-size: 1rem;
+      font-family: "Noto Sans", sans-serif;
     }
     .price-small {
       display: none;
@@ -133,8 +136,9 @@ const Wrapper = styled.article`
     .price {
       display: block;
       font-size: 1rem;
-      color: var(--clr-primary-5);
-      font-weight: 400;
+      color: var(--clr-grey-1);
+      font-weight: 800;
+      font-family: "Noto Sans", sans-serif;
     }
     .name {
       font-size: 0.85rem;

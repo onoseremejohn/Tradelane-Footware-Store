@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
 import { FaTimes } from "react-icons/fa";
 import { links } from "../utils/constants";
@@ -26,14 +26,23 @@ const Sidebar = () => {
         <ul className='links'>
           {links.map(({ id, text, url }) => (
             <li key={id} onClick={closeSidebar}>
-              <Link to={url}>{text}</Link>
+              <NavLink
+                to={url}
+                className={({ isActive }) => (isActive ? active : null)}
+              >
+                {text}
+              </NavLink>
             </li>
           ))}
           {myUser && (
             <li>
-              <Link to='/checkout' onClick={closeSidebar}>
+              <NavLink
+                to='/checkout'
+                onClick={closeSidebar}
+                className={({ isActive }) => (isActive ? active : null)}
+              >
                 checkout
-              </Link>
+              </NavLink>
             </li>
           )}
         </ul>
@@ -44,6 +53,8 @@ const Sidebar = () => {
   );
 };
 
+const active = "activeLink";
+
 const SidebarContainer = styled.div`
   text-align: center;
   .sidebar-header {
@@ -52,6 +63,7 @@ const SidebarContainer = styled.div`
     align-items: center;
     padding: 1rem 1.5rem;
   }
+
   .close-btn {
     font-size: 2rem;
     background: transparent;
@@ -81,6 +93,7 @@ const SidebarContainer = styled.div`
     color: var(--clr-grey-3);
     transition: var(--transition);
     letter-spacing: var(--spacing);
+    position: relative;
   }
 
   .links a:hover {
@@ -88,6 +101,17 @@ const SidebarContainer = styled.div`
     padding-left: 2rem;
     background: var(--clr-grey-10);
     color: var(--clr-grey-2);
+  }
+
+  .links .activeLink::before {
+    content: "";
+    position: absolute;
+    left: 2%;
+    top: 0;
+    transform: translateY(50%);
+    width: 4px;
+    height: 50%;
+    background-color: var(--clr-primary-5);
   }
 
   .sidebar {

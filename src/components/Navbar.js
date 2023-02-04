@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { FaBars } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { links } from "../utils/constants";
 import CartButtons from "./CartButtons";
 import { useProductsContext } from "../context/products_context";
@@ -26,13 +26,23 @@ const Nav = () => {
             const { id, text, url } = link;
             return (
               <li key={id}>
-                <Link to={url}>{text}</Link>
+                <NavLink
+                  to={url}
+                  className={({ isActive }) => (isActive ? active : null)}
+                >
+                  {text}
+                </NavLink>
               </li>
             );
           })}
           {myUser && (
             <li>
-              <Link to='/checkout'>checkout</Link>
+              <NavLink
+                to='/checkout'
+                className={({ isActive }) => (isActive ? active : null)}
+              >
+                checkout
+              </NavLink>
             </li>
           )}
         </ul>
@@ -41,6 +51,8 @@ const Nav = () => {
     </NavContainer>
   );
 };
+
+const active = "activeLink";
 
 const NavContainer = styled.nav`
   height: 5rem;
@@ -88,6 +100,9 @@ const NavContainer = styled.nav`
     .nav-toggle {
       display: none;
     }
+    .activeLink {
+      border-bottom: 2px solid var(--clr-primary-7);
+    }
     .nav-center {
       display: grid;
       grid-template-columns: auto 1fr auto;
@@ -106,7 +121,8 @@ const NavContainer = styled.nav`
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          border-bottom: 2px solid var(--clr-primary-7);
+          /* border-bottom: 2px solid var(--clr-primary-7); */
+          color: var(--clr-primary-5);
         }
       }
     }

@@ -52,6 +52,7 @@ const Wrapper = styled.section`
   p {
     display: grid;
     grid-template-columns: 200px 1fr;
+    font-family: "Satisfy", cursive;
   }
   p {
     text-transform: capitalize;
@@ -67,6 +68,9 @@ const Wrapper = styled.section`
     margin-top: 1rem;
     text-align: center;
     font-weight: 700;
+  }
+  span {
+    font-family: "Noto Sans", sans-serif;
   }
 `;
 

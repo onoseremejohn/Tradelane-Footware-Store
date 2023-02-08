@@ -5,7 +5,13 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import { Navbar, Sidebar, Footer, Error as LoaderError } from "./components";
+import {
+  Navbar,
+  Sidebar,
+  Footer,
+  Error as LoaderError,
+  Overlay,
+} from "./components";
 
 import {
   Home,
@@ -27,6 +33,7 @@ const AppLayout = () => {
       <Sidebar />
       <Outlet />
       <Footer />
+      <Overlay />
     </>
   );
 };

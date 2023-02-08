@@ -118,7 +118,7 @@ const SidebarContainer = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 85%;
     height: 100%;
     background: var(--clr-white);
     transition: var(--transition);

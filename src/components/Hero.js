@@ -12,7 +12,7 @@ const Hero = () => {
           <span>the Trendiest Footwear of the Season</span>
         </h1>
         <p>
-          Welcome to <strong>Trade Lane</strong> footwear store where fashion
+          Welcome to <strong>TradeLane</strong> footwear store where fashion
           meets comfort. Discover your perfect match and step up your style
           game. We have a pair for every occation
         </p>

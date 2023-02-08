@@ -4,22 +4,27 @@ import { FaBars } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import { links } from "../utils/constants";
 import CartButtons from "./CartButtons";
+import CartBtns from "./Cartbtns";
 import { useProductsContext } from "../context/products_context";
 import { useUserContext } from "../context/user_context";
 
 const Nav = () => {
-  const { openSidebar } = useProductsContext();
+  const {
+    openSidebar,
+    windowDimensions: { width },
+  } = useProductsContext();
   const { myUser } = useUserContext();
   return (
     <NavContainer>
       <div className='nav-center'>
         <div className='nav-header'>
-          <Link to='/'>
-            <img src={logo} alt='comfy sloth' />
-          </Link>
           <button onClick={openSidebar} type='button' className='nav-toggle'>
             <FaBars />
           </button>
+          <Link to='/'>
+            <img src={logo} alt='comfy sloth' />
+          </Link>
+          {width < 992 && <CartBtns />}
         </div>
         <ul className='nav-links'>
           {links.map((link) => {
@@ -67,18 +72,13 @@ const NavContainer = styled.nav`
     height: 5rem;
   }
   .nav-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
     height: 5rem;
-    a {
-      display: block;
-      height: 5rem;
-    }
+    grid-template-columns: auto 1fr auto;
+    gap: 15px;
     img {
       display: block;
-      /* height: calc(100% + 2.5rem); */
-      height: 105%;
+      height: calc(5.2rem);
     }
   }
   .nav-toggle {
@@ -108,6 +108,9 @@ const NavContainer = styled.nav`
       grid-template-columns: auto 1fr auto;
       align-items: center;
     }
+    .nav-header {
+      display: block;
+    }
     .nav-links {
       display: flex;
       justify-content: center;
@@ -121,7 +124,6 @@ const NavContainer = styled.nav`
         letter-spacing: var(--spacing);
         padding: 0.5rem;
         &:hover {
-          /* border-bottom: 2px solid var(--clr-primary-7); */
           color: var(--clr-primary-5);
         }
       }

@@ -39,9 +39,11 @@ const Wrapper = styled.div`
   transform: translateY(-50%);
   display: inline-block;
   margin: 0 auto;
+  margin-top: ${({ sidebar }) => (sidebar ? "50px" : "0")};
+  /* margin-top: 50px; */
   ul {
     display: flex;
-    gap: 25px;
+    gap: ${({ sidebar }) => (sidebar ? "50px" : "25px")};
     button {
       background: none;
       border: none;

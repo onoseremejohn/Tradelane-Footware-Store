@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useEffect, useReducer } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import reducer from "../reducers/products_reducer";
 import { products_url as url } from "../utils/constants";
 import {
@@ -27,6 +27,10 @@ const initialState = {
 
 const ProductsContext = React.createContext();
 
+const getWindowDimensions = () => {
+  return { width: window.innerWidth, height: window.innerHeight };
+};
+
 export const ProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -48,6 +52,13 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+  const handleResize = () => {
+    setWindowDimensions(getWindowDimensions());
+  };
+
   // const fetchSingleProduct = async (url) => {
   //   dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
   //   try {
@@ -61,10 +72,14 @@ export const ProductsProvider = ({ children }) => {
 
   useEffect(() => {
     fetchProducts(url);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <ProductsContext.Provider value={{ ...state, openSidebar, closeSidebar }}>
+    <ProductsContext.Provider
+      value={{ ...state, openSidebar, closeSidebar, windowDimensions }}
+    >
       {children}
     </ProductsContext.Provider>
   );

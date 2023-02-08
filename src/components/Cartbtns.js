@@ -35,10 +35,10 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 15px;
-  width: 150px;
+  width: 100px;
   svg {
     color: var(--clr-grey-1);
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
   button {
     background: none;
@@ -48,17 +48,18 @@ const Wrapper = styled.div`
     position: relative;
     .cart-vaalue {
       position: absolute;
-      top: -11px;
-      right: 10px;
+      top: -12px;
+      right: 5px;
       background: var(--clr-primary-5);
-      width: 2.1rem;
-      height: 2.1rem;
+      width: 1.4rem;
+      height: 1.4rem;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: var(--clr-white);
+      padding: .8em;
     }
   }
 `;
